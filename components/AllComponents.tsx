@@ -43,8 +43,9 @@ const useScrollAnimation = () => {
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      const currentRef = ref.current;
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -93,6 +94,7 @@ export const Header = () => {
           {/* Logo with name and profile image */}
           <div className="flex items-center gap-2 sm:gap-4 group cursor-pointer">
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-gradient-to-br from-blue-400 to-teal-400 p-0.5 hover:scale-110 transition-transform duration-300">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/assets/Logo.jpg" 
                 alt="Younus" 
@@ -175,7 +177,7 @@ export const Hero = () => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -319,6 +321,7 @@ export const About = () => {
             <div className="relative inline-block">
               {/* Main avatar */}
               <div className="w-64 sm:w-72 lg:w-80 h-64 sm:h-72 lg:h-80 mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-gradient-to-br from-blue-400 via-teal-400 to-purple-500 p-2">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="/assets/Logo.jpg" 
                   alt="Younus Profile" 
@@ -349,15 +352,15 @@ export const About = () => {
             <div className="space-y-4 sm:space-y-6">
               <div className="glass-effect p-4 sm:p-6 rounded-2xl border border-gray-600/20">
                 <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                  I'm a passionate <span className="text-transparent bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text font-semibold">full-stack developer</span> specializing in modern web technologies. 
+                  I&apos;m a passionate <span className="text-transparent bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text font-semibold">full-stack developer</span> specializing in modern web technologies. 
                   I love creating innovative web applications that solve real-world problems and provide exceptional user experiences.
                 </p>
               </div>
               
               <div className="glass-effect p-4 sm:p-6 rounded-2xl border border-gray-600/20">
                 <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                  My journey in tech started with curiosity about how websites work, and now I'm building complex applications 
-                  using React, Node.js, MongoDB, and other modern technologies. I'm always eager to learn and take on challenging projects.
+                  My journey in tech started with curiosity about how websites work, and now I&apos;m building complex applications 
+                  using React, Node.js, MongoDB, and other modern technologies. I&apos;m always eager to learn and take on challenging projects.
                 </p>
               </div>
             </div>
@@ -920,9 +923,9 @@ export const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-6 sm:space-y-8">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Let's work together</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Let&apos;s work together</h3>
               <p className="text-gray-400 text-base sm:text-lg">
-                I'm always interested in new opportunities and exciting projects. 
+                I&apos;m always interested in new opportunities and exciting projects. 
                 Whether you have a question or just want to say hi, feel free to reach out!
                 Your message will be sent directly to my email address below.
                 Open for internships and freelance work.
@@ -983,7 +986,7 @@ export const Contact = () => {
             <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
               <p className="text-xs sm:text-sm text-blue-300">
                 <Mail className="inline w-4 h-4 mr-2" />
-                Fill out the form below and I'll receive your message directly at sayeedataj37@gmail.com
+                Fill out the form below and I&apos;ll receive your message directly at sayeedataj37@gmail.com
               </p>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">

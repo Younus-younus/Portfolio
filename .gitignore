@@ -30,7 +30,7 @@ lerna-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
-
+.env.production
 # Vercel
 .vercel
 
@@ -94,3 +94,5 @@ jspm_packages/
 # parcel-bundler cache
 .cache
 .parcel-cache
+
+.vercel

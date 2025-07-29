@@ -1,0 +1,62 @@
+{
+  "name": "younus-portfolio",
+  "version": "1.0.0",
+  "homepage": "https://younus-younus.github.io/Portfolio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Younus-younus/Portfolio.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "deploy": "npm run build && npm run export",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "update-browserslist": "npx update-browserslist-db@latest",
+    "analyze": "cross-env ANALYZE=true npm run build"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "lucide-react": "^0.344.0",
+    "next": "^14.2.30",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.2.30",
+    "@types/node": "^20.19.8",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.18",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.30",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.5.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "typescript",
+    "tailwindcss",
+    "react",
+    "web-developer",
+    "full-stack"
+  ],
+  "author": {
+    "name": "Younus",
+    "email": "sayeedataj37@gmail.com",
+    "url": "https://github.com/Younus-younus"
+  },
+  "license": "MIT"
+}
