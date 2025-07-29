@@ -893,7 +893,7 @@ export const Contact = () => {
       
       setStatus({
         type: 'success',
-        message: result.message || 'Message sent successfully! I\'ll get back to you soon.'
+        message: result.message || 'Message sent successfully! I&apos;ll get back to you soon.'
       });
       
       // Reset form
