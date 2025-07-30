@@ -1,13 +1,16 @@
 import {
     About,
     Achievements,
+    Certifications,
     Contact,
     Experience,
     Footer,
     Header,
     Hero,
+    Journey,
     Projects,
-    Skills
+    Skills,
+    Testimonials
 } from '../components/AllComponents'
 
 export default function Home() {
@@ -28,8 +31,11 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
+        <Testimonials />
         <Experience />
+        <Journey />
         <Achievements />
+        <Certifications />
         <Contact />
         <Footer />
       </div>
