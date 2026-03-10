@@ -37,12 +37,12 @@ const useScrollAnimation = () => {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      const currentRef = ref.current;
       if (currentRef) {
         observer.unobserve(currentRef);
       }
@@ -207,7 +207,7 @@ export const Hero = () => {
         {/* Main Heading with Name */}
         <div className="relative mb-3 sm:mb-4 md:mb-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 sm:mb-3 md:mb-4 bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent leading-tight">
-            Hello, I'm Younus
+            Hello, I&apos;m Younus
           </h1>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-400 to-teal-400 mx-auto rounded-full mt-2 opacity-80"></div>
         </div>
@@ -263,7 +263,7 @@ export const Hero = () => {
             className="w-full sm:w-auto relative group glass-effect px-8 sm:px-10 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 border border-blue-400/30 hover:border-blue-400/60"
           >
             <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent flex items-center gap-2">
-              <span>Let's Connect</span>
+              <span>Let&apos;s Connect</span>
               <Mail size={18} className="group-hover:scale-110 transition-transform duration-300" />
             </span>
           </button>
@@ -951,7 +951,7 @@ export const Testimonials = () => {
             >
               {/* Quote decoration */}
               <div className="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-blue-400/20 to-teal-400/20 rounded-full flex items-center justify-center border border-white/10">
-                <span className="text-blue-400 text-lg">"</span>
+                <span className="text-blue-400 text-lg">&quot;</span>
               </div>
               
               {/* Rating Stars */}
@@ -963,7 +963,7 @@ export const Testimonials = () => {
               
               {/* Testimonial Content */}
               <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 italic">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
               
               {/* Author Info */}
@@ -1004,7 +1004,7 @@ export const Testimonials = () => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              <span>Let's Connect</span>
+              <span>Let&apos;s Connect</span>
               <ArrowDown size={16} className="rotate-[-90deg]" />
             </a>
           </div>
