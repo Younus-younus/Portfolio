@@ -38,20 +38,43 @@ export const sendEmail = async (data: EmailData) => {
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
+    console.log('Environment check:', {
+      serviceId,
+      templateId,
+      publicKey,
+      nodeEnv: process.env.NODE_ENV
+    });
+
     if (!serviceId || !templateId || !publicKey) {
       throw new Error('Email service is not properly configured. Please contact the administrator.');
     }
 
-    // Template parameters
+    // Template parameters matching EmailJS default template format
+    // Supports multiple common variable name patterns
     const templateParams = {
-      name: sanitizedData.name,
-      email: sanitizedData.email,
+      from_name: sanitizedData.name,
+      from_email: sanitizedData.email,
+      to_name: 'Portfolio Owner',
       message: sanitizedData.message,
-      timestamp: new Date().toISOString(),
+      // Also include alternatives in case template uses these
+      user_name: sanitizedData.name,
+      user_email: sanitizedData.email,
+      reply_to: sanitizedData.email,
     };
 
-    // Send email without logging sensitive information
-    const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+    console.log('Attempting to send email...');
+
+    // Send email with public key as options parameter
+    const result = await emailjs.send(
+      serviceId,
+      templateId,
+      templateParams,
+      {
+        publicKey: publicKey,
+      }
+    );
+    
+    console.log('Email sent successfully:', result);
     
     if (result.status === 200) {
       return { success: true, message: 'Email sent successfully!' };
@@ -59,8 +82,8 @@ export const sendEmail = async (data: EmailData) => {
       throw new Error('Failed to send email');
     }
   } catch (error) {
-    // Log error for debugging (without sensitive data)
-    console.error('Email sending failed:', error instanceof Error ? error.message : 'Unknown error');
+    // Log detailed error for debugging
+    console.error('Email sending failed:', error);
     
     // Return user-friendly error message
     if (error instanceof Error) {

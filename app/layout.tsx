@@ -5,21 +5,21 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Younus - Full Stack Developer Portfolio',
-  description: 'Full Stack Web Developer specializing in React, Node.js, and modern web technologies. Available for internships and freelance projects.',
-  keywords: 'full stack developer, web developer, react, nodejs, portfolio, freelancer',
+  title: 'Younus - Machine Learning Engineer Portfolio',
+  description: 'Machine Learning Engineer specializing in Deep Learning, AI Systems, Computer Vision, and NLP. Building production-scale ML solutions.',
+  keywords: 'machine learning engineer, AI engineer, deep learning, computer vision, NLP, data science, PyTorch, TensorFlow, MLOps',
   authors: [{ name: 'Younus' }],
   creator: 'Younus',
   openGraph: {
-    title: 'Younus - Full Stack Developer Portfolio',
-    description: 'Full Stack Web Developer specializing in React, Node.js, and modern web technologies.',
+    title: 'Younus - Machine Learning Engineer Portfolio',
+    description: 'Machine Learning Engineer specializing in Deep Learning, AI Systems, and production ML deployments.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Younus - Full Stack Developer Portfolio',
-    description: 'Full Stack Web Developer specializing in React, Node.js, and modern web technologies.',
+    title: 'Younus - Machine Learning Engineer Portfolio',
+    description: 'Machine Learning Engineer specializing in Deep Learning, AI Systems, and production ML deployments.',
   },
   robots: {
     index: true,

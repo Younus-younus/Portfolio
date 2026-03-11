@@ -9,6 +9,7 @@ declare module 'lucide-react' {
   
   export type LucideIcon = ComponentType<LucideProps>;
   
+  // Original icons
   export const Menu: LucideIcon;
   export const X: LucideIcon;
   export const Github: LucideIcon;
@@ -27,4 +28,20 @@ declare module 'lucide-react' {
   export const Database: LucideIcon;
   export const Server: LucideIcon;
   export const Globe: LucideIcon;
+  
+  // Additional icons for ML Portfolio
+  export const ArrowRight: LucideIcon;
+  export const Award: LucideIcon;
+  export const BookOpen: LucideIcon;
+  export const Brain: LucideIcon;
+  export const Box: LucideIcon;
+  export const ChevronDown: LucideIcon;
+  export const FileText: LucideIcon;
+  export const GitBranch: LucideIcon;
+  export const Layers: LucideIcon;
+  export const Moon: LucideIcon;
+  export const Sparkles: LucideIcon;
+  export const Sun: LucideIcon;
+  export const TrendingUp: LucideIcon;
+  export const Zap: LucideIcon;
 }
