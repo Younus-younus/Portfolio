@@ -209,7 +209,7 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-light tracking-tight text-gray-900 dark:text-white leading-tight">
-              Hi, I'm <span className="font-semibold">Younus</span>
+              Hi, I&apos;m <span className="font-semibold">Younus</span>
             </h1>
             
             <h2 className="text-2xl md:text-3xl font-light text-gray-600 dark:text-gray-400">
@@ -926,7 +926,7 @@ export const Contact = () => {
             {/* Contact Info */}
             <div>
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 dark:text-white mb-6">
-                Let's Work Together
+                Let&apos;s Work Together
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-12 text-lg">
                 Open to full-stack development roles, machine learning projects, and collaborative opportunities.
